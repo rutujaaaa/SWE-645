@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+<!--This page lists the surveys taken till now and displays in tabular form-->
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>List All Survey</title>
+<link rel = "stylesheet" type = "text/css" href = "css/styles.css" /> 
+</h:head>
+<h:body>
+<h:form>
+<h:dataTable value="#{surveyBean.students}" var="student" border="2" >
+<f:facet name="caption">Survey Details</f:facet>	  
+<h:column>
+<f:facet name="header">First Name</f:facet>
+#{student.firstname}
+</h:column>
+<h:column>
+<f:facet name="header">Last Name</f:facet>
+#{student.lastname}
+</h:column>
+<h:column>
+<f:facet name="header">Street Address</f:facet>
+#{student.streetaddress}
+</h:column>
+<h:column>
+<f:facet name="header">City</f:facet>
+#{student.city}
+</h:column>
+<h:column>
+<f:facet name="header">State</f:facet>
+#{student.state}
+</h:column>
+<h:column>
+<f:facet name="header">Zip Code</f:facet>
+#{student.zipcode}
+</h:column>
+<h:column>
+<f:facet name="header">Telephone Number</f:facet>
+#{student.phonenumber}
+</h:column>
+<h:column>
+<f:facet name="header">Email</f:facet>
+#{student.email}
+</h:column>
+<h:column>
+<f:facet name="header">Date</f:facet>
+#{student.date}
+</h:column>
+<h:column>
+<f:facet name="header">Most admired</f:facet>
+#{student.campusOptions}
+</h:column>
+<h:column>
+<f:facet name="header">Interest in University?</f:facet>
+#{student.interestedin}
+</h:column>
+<h:column>
+<f:facet name="header">Recommendation</f:facet>
+#{student.recommendation}
+</h:column>
+<h:column>
+<f:facet name="header">Raffle Ticket Number</f:facet>
+#{student.raffle}
+</h:column>
+<h:column>
+<f:facet name="header">Additional Comments</f:facet>
+#{student.additionalComments}
+</h:column>
+</h:dataTable>
+</h:form>
+<h:button value="Go Back to Survey Form" outcome="StudentSurvey.xhtml" styleClass="button"/>
+</h:body>
+</html>
